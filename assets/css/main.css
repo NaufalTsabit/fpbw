@@ -1890,10 +1890,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 5px;
 }
 
+<<<<<<< HEAD
+=======
 #header.header-scrolled {
   background: rgba(0, 0, 0, 0.8);
   transition: all 0.5s;
 }
+>>>>>>> 70a941aabed280f974af5baaaff601078dac8e67
 
 @media (max-width: 673px) {
   #logo {
