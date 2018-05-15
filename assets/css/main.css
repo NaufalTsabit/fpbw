@@ -4,7 +4,11 @@
 /* Mobile Layout: 320px */
 /* Wide Mobile Layout: 480px */
 /* =================================== */
+<<<<<<< HEAD
 /*  Basic Style
+=======
+/*  Basic Style 
+>>>>>>> 497282e711ca0cebff03e4a905607f0761236d8d
 /* =================================== */
 ::-moz-selection {
   /* Code for Firefox */
@@ -1883,7 +1887,10 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   transition: all 0.5s;
   z-index: 997;
+<<<<<<< HEAD
   background: rgba(0, 0, 0, 0.8);
+=======
+>>>>>>> 497282e711ca0cebff03e4a905607f0761236d8d
 }
 
 #header hr {
@@ -1891,10 +1898,19 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 5px;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 497282e711ca0cebff03e4a905607f0761236d8d
 #header.header-scrolled {
   background: rgba(0, 0, 0, 0.8);
   transition: all 0.5s;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 70a941aabed280f974af5baaaff601078dac8e67
+>>>>>>> 497282e711ca0cebff03e4a905607f0761236d8d
 
 @media (max-width: 673px) {
   #logo {
@@ -3484,12 +3500,15 @@ body.mobile-nav-active #mobile-nav-toggle {
   border: none;
   background: #f9f9ff;
 }
+<<<<<<< HEAD
 .center {
   margin: auto;
   width: 50%;
   border: 3px solid green;
   padding: 10px;
 }
+=======
+>>>>>>> 497282e711ca0cebff03e4a905607f0761236d8d
 
 /*
 ################
