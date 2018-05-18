@@ -4,7 +4,7 @@
 	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Favicon-->
-	<link rel="shortcut icon" href="assets/img/fav.png">
+	<link rel="shortcut icon" href="<?php echo base_url('assets/img/fav.png'); ?>">
 	<!-- Author Meta -->
 	<meta name="author" content="codepixer">
 	<!-- Meta Description -->
@@ -14,22 +14,22 @@
 	<!-- meta character set -->
 	<meta charset="UTF-8">
 	<!-- Site Title -->
-	<link rel="icon" type="image/png" href=assets/img/icon.png>
+	<link rel="icon" type="image/png" href="<?php echo base_url('assets/img/icon.png'); ?>">
 	<title>Konsep Studio</title>
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 		<!--
 		CSS
 		============================================= -->
-		<link rel="stylesheet" href="assets/css/linearicons.css">
-		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-		<link rel="stylesheet" href="assets/css/bootstrap.css">
-		<link rel="stylesheet" href="assets/css/magnific-popup.css">
-		<link rel="stylesheet" href="assets/css/nice-select.css">
-		<link rel="stylesheet" href="assets/css/animate.min.css">
+		<link rel="stylesheet" href="<?php echo base_url('assets/css/linearicons.css'); ?>">
+		<link rel="stylesheet" href="<?php echo base_url('assets/css/font-awesome.min.css'); ?>">
+		<link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.css'); ?>">
+		<link rel="stylesheet" href="<?php echo base_url('assets/css/magnific-popup.css'); ?>">
+		<link rel="stylesheet" href="<?php echo base_url('assets/css/nice-select.css'); ?>">
+		<link rel="stylesheet" href="<?php echo base_url('assets/css/animate.min.css'); ?>">
 		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-		<link rel="stylesheet" href="assets/css/owl.carousel.css">
-		<link rel="stylesheet" href="assets/css/main.css">
+		<link rel="stylesheet" href="<?php echo base_url('assets/css/owl.carousel.css'); ?>">
+		<link rel="stylesheet" href="<?php echo base_url('assets/css/main.css'); ?>">
 	</head>
 	<body>
 
@@ -37,7 +37,7 @@
 		    <div class="container">
 		    	<div class="row align-items-center justify-content-between d-flex">
 			      <div id="logo">
-			        <a href="<?php echo base_url()?>"><img src="assets/img/newlogo.png" height="30" width="198"/></a>
+			        <a href="<?php echo base_url()?>"><img src="<?php echo base_url('assets/img/newlogo.png'); ?>" height="30" width="198"/></a>
 			      </div>
 			      <nav id="nav-menu-container">
 							<?php if(base_url(uri_string()) == 'http://'.$_SERVER['HTTP_HOST'].str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']).'admin'){ ?>
@@ -48,7 +48,7 @@
 			          <li><a href="<?php echo base_url("service"); ?>">Service</a></li>
 			          <li><a href="<?php echo base_url("team"); ?>">Team</a></li>
 			          <!-- <li><a href="<?php echo base_url()."index.php/Welcome/pages/"."blog-home"; ?>">Blog</a></li> -->
-			          <li><a href="<?php echo base_url("Login/logout"); ?>"><?php echo $this->session->userdata("nama"); ?></a></li>
+			          <li><a href="<?php echo base_url("Logout"); ?>"><?php echo $this->session->userdata("nama"); ?></a></li>
 			          <!-- <li class="menu-has-children"><a href="">Pages</a>
 			            <ul>
 			              <li><a href="blog-single.html">Blog Single</a></li>

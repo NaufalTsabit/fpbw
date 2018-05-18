@@ -4,15 +4,7 @@
 /* Mobile Layout: 320px */
 /* Wide Mobile Layout: 480px */
 /* =================================== */
-<<<<<<< HEAD
 /*  Basic Style
-=======
-<<<<<<< HEAD
-/*  Basic Style
-=======
-/*  Basic Style 
->>>>>>> 497282e711ca0cebff03e4a905607f0761236d8d
->>>>>>> cd1f59f3ee478af29d28d15d96b2b9bff717dcc1
 /* =================================== */
 ::-moz-selection {
   /* Code for Firefox */
@@ -1891,14 +1883,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   transition: all 0.5s;
   z-index: 997;
-<<<<<<< HEAD
   background: rgba(0, 0, 0, 0.8);
-=======
-<<<<<<< HEAD
-  background: rgba(0, 0, 0, 0.8);
-=======
->>>>>>> 497282e711ca0cebff03e4a905607f0761236d8d
->>>>>>> cd1f59f3ee478af29d28d15d96b2b9bff717dcc1
 }
 
 #header hr {
@@ -1906,25 +1891,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 5px;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 497282e711ca0cebff03e4a905607f0761236d8d
->>>>>>> cd1f59f3ee478af29d28d15d96b2b9bff717dcc1
 #header.header-scrolled {
   background: rgba(0, 0, 0, 0.8);
   transition: all 0.5s;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 70a941aabed280f974af5baaaff601078dac8e67
->>>>>>> 497282e711ca0cebff03e4a905607f0761236d8d
->>>>>>> cd1f59f3ee478af29d28d15d96b2b9bff717dcc1
 
 @media (max-width: 673px) {
   #logo {
@@ -3514,21 +3484,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   border: none;
   background: #f9f9ff;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cd1f59f3ee478af29d28d15d96b2b9bff717dcc1
 .center {
   margin: auto;
   width: 50%;
   border: 3px solid green;
   padding: 10px;
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 497282e711ca0cebff03e4a905607f0761236d8d
->>>>>>> cd1f59f3ee478af29d28d15d96b2b9bff717dcc1
 
 /*
 ################

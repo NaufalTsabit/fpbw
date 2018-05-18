@@ -12,7 +12,7 @@ class Admin extends CI_Controller{
 
 	function index(){
     $this->load->view('header');
-		$this->load->view('admin');
+		$this->load->view('Admin/admin');
     $this->load->view('footer');
 	}
 }

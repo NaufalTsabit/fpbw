@@ -57,4 +57,4 @@ $route['cars']='Welcome/pages/cars';
 $route['service']='Welcome/pages/service';
 $route['team']='Welcome/pages/team';
 $route['contact']='Welcome/pages/contact';
-$route['gallery']='Welcome/pages/gallery';
+$route['gallery']='Welcome/gallery';
