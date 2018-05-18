@@ -1085,20 +1085,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .progress-table .serial {
-  width: 11.83%;
-  padding-left: 30px;
+  width: 4.50%;
+  padding-left: 15px;
 }
 
 .progress-table .country {
-  width: 28.07%;
+  width: 40.00%
 }
 
 .progress-table .visit {
-  width: 19.74%;
+  width: 40.00%;
 }
 
 .progress-table .percentage {
-  width: 40.36%;
+  width: 15.5%;
   padding-right: 50px;
 }
 
@@ -1125,7 +1125,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .progress-table .table-row .country img {
-  margin-right: 15px;
 }
 
 .progress-table .table-row .percentage .progress {
@@ -2951,7 +2950,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .section-top-border {
   padding: 70px 0;
-  border-top: 1px dotted #eee;
 }
 
 .switch-wrap {
@@ -3489,6 +3487,23 @@ body.mobile-nav-active #mobile-nav-toggle {
   width: 50%;
   border: 3px solid green;
   padding: 10px;
+}
+.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
+  background-color: #4EA9F7;
+	border-color: #4EA9F7;
+	color: #fff !important;
+}
+.pagination>.disabled>a, .pagination>.disabled>a:focus, .pagination>.disabled>a:hover, .pagination>.disabled>span, .pagination>.disabled>span:focus, .pagination>.disabled>span:hover {
+	color: #aab2bd;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+	background-color: #37bc9b;
+  border-color: #37bc9b;
+  color: #fff !important;
+}
+.topic .container .pagination>li>a, .topic .container .pagination>li>span {
+	color: #747474;
+	text-decoration: none;
 }
 
 /*

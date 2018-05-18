@@ -58,3 +58,4 @@ $route['service']='Welcome/pages/service';
 $route['team']='Welcome/pages/team';
 $route['contact']='Welcome/pages/contact';
 $route['gallery']='Welcome/gallery';
+$route['datakamera']='Welcome/admin/datakamera';

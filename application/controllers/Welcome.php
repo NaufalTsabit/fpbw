@@ -21,7 +21,7 @@ class Welcome extends CI_Controller {
 	public function __construct() {
         parent::__construct();
         $this->load->helper(array('url'));
-				$this->load->model(array('Model_insert','Model_data'));
+				$this->load->model(array('Model_insert','Model_data','Model_delete'));
     }
 	public function index() {
 		$this->load->view('header');
@@ -75,4 +75,13 @@ class Welcome extends CI_Controller {
 				redirect('admin');
       }
   }
+	public function deleteimg($id) {
+		$where = array('file_name'=>$id);
+		unlink('uploads/'.$id);
+		$result = $this->Model_delete->delete('files', $where);
+
+		if($result >= 1) {
+			redirect('admin');
+		}
+	}
 }

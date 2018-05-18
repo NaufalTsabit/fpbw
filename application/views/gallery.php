@@ -8,7 +8,8 @@
       <div class="col-md-3">
         <a href="<?php echo base_url('uploads/'. $u->file_name ); ?>" class="img-pop-up">
           <div class="single-gallery-image" style="background: url(<?php echo base_url('uploads/'.$u->file_name ); ?>);">
-          </div></a>
+          </div>
+        </a>
       </div>
       <?php }
       echo $this->pagination->create_links(); ?>

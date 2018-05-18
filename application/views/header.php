@@ -42,7 +42,7 @@
 			      <nav id="nav-menu-container">
 							<?php if(base_url(uri_string()) == 'http://'.$_SERVER['HTTP_HOST'].str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']).'admin'){ ?>
 							<ul class="nav-menu">
-			          <li class="menu-active"><a href="<?php echo base_url()?>">test</a></li>
+			          <li class="menu-active"><a href="<?php echo base_url()?>">Data Kamera</a></li>
 			          <li><a href="<?php echo base_url("about"); ?>">test</a></li>
 			          <li><a href="<?php echo base_url("cars"); ?>">Cars</a></li>
 			          <li><a href="<?php echo base_url("service"); ?>">Service</a></li>
