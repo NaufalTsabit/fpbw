@@ -10,6 +10,11 @@ class Model_insert extends CI_Model {
 		$res = $this->db->get();
 		return $res->result_array();
 	}
+	function getDataNoR($table) {
+		$this->db->from($table);
+		$res = $this->db->get();
+		return $res->result_array();
+	}
 
 	function insert_file($table, $data) {
 		$res = $this->db->insert($table, $data);

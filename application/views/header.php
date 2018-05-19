@@ -42,10 +42,8 @@
 			      <nav id="nav-menu-container">
 							<?php if($this->session->userdata('status') == "login"){ ?>
 							<ul class="nav-menu">
-			          <li class="menu-active"><a href="<?php echo base_url()?>">Data Kamera</a></li>
-			          <li><a href="<?php echo base_url("cars"); ?>">Cars</a></li>
-			          <li><a href="<?php echo base_url("service"); ?>">Service</a></li>
-			          <li><a href="<?php echo base_url("team"); ?>">Team</a></li>
+			          <li class="menu-active"><a href="<?php echo base_url("datakamera")?>">Data Kamera</a></li>
+			          <li><a href="<?php echo base_url("admin"); ?>">Gallery</a></li>
 			          <!-- <li><a href="<?php echo base_url()."index.php/Welcome/pages/"."blog-home"; ?>">Blog</a></li> -->
 								<li class="menu-has-children"><a href=""><?php echo $this->session->userdata("nama"); ?></a>
 									<ul>
@@ -63,7 +61,7 @@
 						<?php } else { ?>
 			        <ul class="nav-menu">
 			          <li class="menu-active"><a href="<?php echo base_url()?>">Home</a></li>
-			          <li><a href="<?php echo base_url("cars"); ?>">Cars</a></li>
+			          <li><a href="<?php echo base_url("camera"); ?>">Camera</a></li>
 			          <li><a href="<?php echo base_url("gallery"); ?>">Gallery</a></li>
 			          <!-- <li><a href="<?php echo base_url()."index.php/Welcome/pages/"."blog-home"; ?>">Blog</a></li> -->
 			          <li><a href="<?php echo base_url("contact"); ?>">Contact</a></li>

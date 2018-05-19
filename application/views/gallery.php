@@ -6,17 +6,14 @@
     <br/>
     <p>Made By Enochians, Aerial & Equipment Supported By Konsep Studio </p>
     <div class="row gallery-item">
-      <?php $no = $this->uri->segment('3') + 1;
-      foreach ($files as $u) {
-        $no++; ?>
+      <?php foreach ($data as $u) { ?>
       <div class="col-md-3">
-        <a href="<?php echo base_url('uploads/'. $u->file_name ); ?>" class="img-pop-up">
-          <div class="single-gallery-image" style="background: url(<?php echo base_url('uploads/'.$u->file_name ); ?>);">
+        <a href="<?php echo base_url('uploads/'. $u['file_name'] ); ?>" class="img-pop-up">
+          <div class="single-gallery-image" style="background: url(<?php echo base_url('uploads/'.$u['file_name'] ); ?>);">
           </div>
         </a>
       </div>
-      <?php }
-      echo $this->pagination->create_links(); ?>
+      <?php } ?>
     </div>
   </div>
 </div>

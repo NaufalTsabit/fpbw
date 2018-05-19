@@ -3511,6 +3511,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-bottom: 6px solid black;
   width: 50px
 }
+.uploads {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
 
 /*
 ################

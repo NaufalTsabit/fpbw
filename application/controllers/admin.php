@@ -18,4 +18,10 @@ class Admin extends CI_Controller{
 		$this->load->view('Admin/admin', array('data' => $data));
     $this->load->view('footer');
 	}
+	public function admin($site) {
+		$data = $this->Model_insert->getDataNoR('data_kamera');
+		$this->load->view('header');
+		$this->load->view('Admin/'.$site, array('data' => $data));
+		$this->load->view('footer');
+	}
 }

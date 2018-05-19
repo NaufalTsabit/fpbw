@@ -21,12 +21,13 @@ class Welcome extends CI_Controller {
 	public function __construct() {
         parent::__construct();
         $this->load->helper(array('url'));
-				$this->load->model(array('Model_insert','Model_data','Model_delete','Model_change'));
+				$this->load->model(array('Model_insert','Model_data','Model_delete','Model_change','Model_update'));
 				$this->load->library('form_validation');
     }
 	public function index() {
+		$data = $this->Model_insert->getData('data_kamera');
 		$this->load->view('header');
-		$this->load->view('index');
+		$this->load->view('index', array('data' => $data));
 		$this->load->view('footer');
 	}
 	public function pages($site) {
@@ -35,26 +36,27 @@ class Welcome extends CI_Controller {
 		$this->load->view($site, array('data' => $data));
 		$this->load->view('footer');
 	}
-	public function gallery(){
+	public function product($site) {
+		$data = $this->Model_insert->getData('data_kamera');
+		$this->load->view('header');
+		$this->load->view($site, array('data' => $data));
+		$this->load->view('footer');
+	}
+	public function camera(){
 		$this->load->database();
 		$jumlah_data = $this->Model_data->jumlah_data();
 		$this->load->library('pagination');
-		$config['base_url'] = base_url().'Welcome/gallery';
+		$config['base_url'] = base_url().'Welcome/camera';
 		$config['total_rows'] = $jumlah_data;
 		$config['per_page'] = 16;
 		$from = $this->uri->segment(3);
 		$this->pagination->initialize($config);
 		$data['files'] = $this->Model_data->data($config['per_page'],$from);
 		$this->load->view('header');
-		$this->load->view('gallery',$data);
+		$this->load->view('cars',$data);
 		$this->load->view('footer');
 	}
-	public function admin($site) {
-		$this->load->view('header');
-		$this->load->view('Admin/'.$site);
-		$this->load->view('footer');
-	}
-  public function upload()
+  public function upload($db)
   {
       $config = array(
           'upload_path' => "./uploads/",
@@ -67,12 +69,12 @@ class Welcome extends CI_Controller {
       $this->load->library('upload', $config);
 			if ( ! $this->upload->do_upload('userfile')) {
       	$error = array('error' => $this->upload->display_errors());
-
+				var_dump($error);
         // $this->load->view('upload_form', $error);
       } else {
 				$data = $this->upload->data();
 				$image['file_name'] = $data['file_name'];
-				$this->Model_insert->insert_file('files',$image);
+				$this->Model_insert->insert_file($db,$image);
 				redirect('admin');
       }
   }
@@ -107,4 +109,97 @@ class Welcome extends CI_Controller {
    		}//end if valid_user
   	}
  	}
+
+	public function inputkamera() {
+		$tipekamera = $this->input->post('tipekamera');
+		$series = $this->input->post('series');
+		$stock = $this->input->post('stock');
+		$harga = $this->input->post('harga');
+		$deskripsi = $this->input->post('deskripsi');
+		$config = array(
+				'upload_path' => "./uploads/",
+				'allowed_types' => "gif|jpg|png|jpeg|pdf",
+				'overwrite' => TRUE,
+				'max_size' => "5120000", //in bytes
+				'max_height' => "10000",
+				'max_width' => "10000"
+		);
+		$this->load->library('upload', $config);
+		if ( ! $this->upload->do_upload('test')) {
+			$error = array('error' => $this->upload->display_errors());
+			var_dump($error);
+			// $this->load->view('upload_form', $error);
+		} else {
+			$data = $this->upload->data();
+			$image = $data['file_name'];
+			$test = array(
+				'merk' => $tipekamera,
+				'seri' => $series,
+				'stock' => $stock,
+				'harga' => $harga,
+				'deskripsi' => $deskripsi,
+				'gambar' => $image
+			);
+			$result = $this->Model_insert->insert_file('data_kamera', $test);
+			redirect('admin/admin/datakamera');
+		}
+	}
+
+	public function delete($id) {
+		$where = array('ID'=>$id);
+		$result = $this->Model_delete->delete('data_kamera', $where);
+
+		if($result >= 1) {
+		redirect('admin/admin/datakamera');
+		}
+	}
+
+	public function edit($id) {
+		$where = array('id' => $id);
+ 		$data['data_kamera'] = $this->Model_update->edit($where,'data_kamera')->result();
+		$this->load->view('header');
+		$this->load->view('Admin/editkamera',$data);
+		$this->load->view('footer');
+	}
+	public function update(){
+		$id = $this->input->post('id');
+ 		$tipekamera = $this->input->post('tipekamera');
+ 		$series = $this->input->post('series');
+ 		$stock = $this->input->post('stock');
+ 		$harga = $this->input->post('harga');
+ 		$deskripsi = $this->input->post('deskripsi');
+		$config = array(
+				'upload_path' => "./uploads/",
+				'allowed_types' => "gif|jpg|png|jpeg|pdf",
+				'overwrite' => TRUE,
+				'max_size' => "5120000", //in bytes
+				'max_height' => "10000",
+				'max_width' => "10000"
+		);
+		$this->load->library('upload', $config);
+		if ( ! $this->upload->do_upload('test')) {
+			$error = array('error' => $this->upload->display_errors());
+			var_dump($error);
+			// $this->load->view('upload_form', $error);
+		} else {
+			$data = $this->upload->data();
+			$image = $data['file_name'];
+			var_dump($data);
+			$test = array(
+				'merk' => $tipekamera,
+				'seri' => $series,
+				'stock' => $stock,
+				'harga' => $harga,
+				'deskripsi' => $deskripsi,
+				'gambar' => $image
+			);
+		}
+
+ 		$where = array(
+  		'id' => $id
+ 		);
+
+ 		$this->Model_update->update($where,$test,'data_kamera');
+ 		redirect('admin/datakamera');
+	}
 }

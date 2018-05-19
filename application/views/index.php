@@ -88,76 +88,34 @@
 			<div class="container">
 				<div class="row d-flex justify-content-center pb-40">
 					<div class="col-md-8 pb-40 header-text">
-						<h1 class="text-center pb-10">See Our Recent Camera</h1>
+						<h1 class="text-center pb-10">Our Recent Camera</h1>
 						<p class="text-center">
 							With high quality camera for you to choose.
 						</p>
 					</div>
 				</div>
 				<div class="active-model-carusel">
+					<?php foreach(array_slice($data,0,3) as $row) { ?>
 					<div class="row align-items-center single-model item">
 						<div class="col-lg-6 model-left">
 							<div class="title justify-content-between d-flex">
-								<h4 class="mt-20">Audi 3000 msi</h4>
-								<h2>$149<span>/day</span></h2>
+								<h4 class="mt-20"><?php echo $row['merk'];?> <?php echo $row['seri'];?></h4>
+								<h2>Rp <?php echo $row['harga'];?>k<span>/day</span></h2>
 							</div>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								<?php echo $row['deskripsi'];?>
 							</p>
 							<p>
-								Capacity         : 04 Person <br>
-								Doors            : 04 <br>
-								Air Condition    : Dual Zone <br>
-								Transmission     : Automatic
+								Format           : <?php echo $row['format'];?> <br>
+								Resolution       : <?php echo $row['resolusi'];?> megapixel<br>
+								Stocks           : <?php echo $row['stock'];?> <br>
 							</p>
-							<a class="text-uppercase primary-btn" href="#">Book This Car Now</a>
 						</div>
 						<div class="col-lg-6 model-right">
-							<img class="img-fluid" src="assets/img/car.jpg" alt="">
+							<img class="img-fluid" src="<?php echo base_url('uploads/'. $row['gambar'] ); ?>" alt="">
 						</div>
 					</div>
-					<div class="row align-items-center single-model item">
-						<div class="col-lg-6 model-left">
-							<div class="title justify-content-between d-flex">
-								<h4 class="mt-20">Audi 3000 msi</h4>
-								<h2>$149<span>/day</span></h2>
-							</div>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							</p>
-							<p>
-								Capacity         : 04 Person <br>
-								Doors            : 04 <br>
-								Air Condition    : Dual Zone <br>
-								Transmission     : Automatic
-							</p>
-							<a class="text-uppercase primary-btn" href="#">Book This Car Now</a>
-						</div>
-						<div class="col-lg-6 model-right">
-							<img class="img-fluid" src="assets/img/car.jpg" alt="">
-						</div>
-					</div>
-					<div class="row align-items-center single-model item">
-						<div class="col-lg-6 model-left">
-							<div class="title justify-content-between d-flex">
-								<h4 class="mt-20">Audi 3000 msi</h4>
-								<h2>$149<span>/day</span></h2>
-							</div>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-							</p>
-							<p>
-								Capacity         : 04 Person <br>
-								Doors            : 04 <br>
-								Air Condition    : Dual Zone <br>
-								Transmission     : Automatic
-							</p>
-							<a class="text-uppercase primary-btn" href="#">Book This Car Now</a>
-						</div>
-						<div class="col-lg-6 model-right">
-							<img class="img-fluid" src="assets/img/car.jpg" alt="">
-						</div>
-					</div>
+					<?php } ?>
 				</div>
 			</div>
 		</section>

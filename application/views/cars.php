@@ -5,172 +5,34 @@
 					<div class="row d-flex align-items-center justify-content-center">
 						<div class="about-content col-lg-12">
 							<h1 class="text-white">
-								Cars
+								Camera
 							</h1>
 						</div>
 					</div>
 				</div>
 			</section>
 			<!-- End banner Area -->
-
-			<!-- Start model Area -->
-			<section class="model-area section-gap" id="cars">
-				<div class="container">
-					<div class="row d-flex justify-content-center pb-40">
-						<div class="col-md-8 pb-40 header-text">
-							<h1 class="text-center pb-10">See Our Recent Camera</h1>
-							<p class="text-center">
-								With high quality camera for you to choose.
-							</p>
-						</div>
-					</div>
-					<div class="active-model-carusel">
-						<div class="row align-items-center single-model item">
-							<div class="col-lg-6 model-left">
-								<div class="title justify-content-between d-flex">
-									<h4 class="mt-20">Audi 3000 msi</h4>
-									<h2>$149<span>/day</span></h2>
-								</div>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-								</p>
-								<p>
-									Capacity         : 04 Person <br>
-									Doors            : 04 <br>
-									Air Condition    : Dual Zone <br>
-									Transmission     : Automatic
-								</p>
-								<a class="text-uppercase primary-btn" href="#">Book This Car Now</a>
-							</div>
-							<div class="col-lg-6 model-right">
-								<img class="img-fluid" src="assets/img/car.jpg" alt="">
-							</div>
-						</div>
-						<div class="row align-items-center single-model item">
-							<div class="col-lg-6 model-left">
-								<div class="title justify-content-between d-flex">
-									<h4 class="mt-20">Audi 3000 msi</h4>
-									<h2>$149<span>/day</span></h2>
-								</div>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-								</p>
-								<p>
-									Capacity         : 04 Person <br>
-									Doors            : 04 <br>
-									Air Condition    : Dual Zone <br>
-									Transmission     : Automatic
-								</p>
-								<a class="text-uppercase primary-btn" href="#">Book This Car Now</a>
-							</div>
-							<div class="col-lg-6 model-right">
-								<img class="img-fluid" src="assets/img/car.jpg" alt="">
-							</div>
-						</div>
-						<div class="row align-items-center single-model item">
-							<div class="col-lg-6 model-left">
-								<div class="title justify-content-between d-flex">
-									<h4 class="mt-20">Audi 3000 msi</h4>
-									<h2>$149<span>/day</span></h2>
-								</div>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-								</p>
-								<p>
-									Capacity         : 04 Person <br>
-									Doors            : 04 <br>
-									Air Condition    : Dual Zone <br>
-									Transmission     : Automatic
-								</p>
-								<a class="text-uppercase primary-btn" href="#">Book This Car Now</a>
-							</div>
-							<div class="col-lg-6 model-right">
-								<img class="img-fluid" src="assets/img/car.jpg" alt="">
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- End model Area -->
-
-			<!-- Start callaction Area -->
-			<section class="callaction-area relative section-gap">
-				<div class="overlay overlay-bg"></div>
-				<div class="container">
-					<div class="row justify-content-center">
-						<div class="col-lg-10">
-							<h1 class="text-white">Experience Great Support</h1>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-							</p>
-							<a class="callaction-btn text-uppercase" href="#">Reach Our Support Team</a>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- End callaction Area -->
-
 			<!-- Start feature Area -->
 			<section class="feature-area section-gap" id="service">
 				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="col-md-8 pb-40 header-text">
-							<h1>What Services we offer to our clients</h1>
-							<p>
-								Who are in extremely love with eco friendly system.
-							</p>
-						</div>
-					</div>
+
 					<div class="row">
+						<?php $no = $this->uri->segment('3') + 1;
+						foreach ($files as $row) {
+							$no++; ?>
 						<div class="col-lg-4 col-md-6">
 							<div class="single-feature">
-								<h4><span class="lnr lnr-user"></span>Expert Technicians</h4>
-								<p>
-									Usage of the Internet is becoming more common due to rapid advancement of technology and power.
-								</p>
+								<h4 align="center"><?php echo $row->merk;?> <?php echo $row->seri;?></h4>
+
+								<div class="row d-flex justify-content-center">
+									<img src="<?php echo base_url('uploads/'.$row->gambar); ?>" height="230" width="300">
+									<a href="<?php echo base_url(''); ?>" class="genric-btn primary small">Detail</a>
+								</div>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-6">
-							<div class="single-feature">
-								<h4><span class="lnr lnr-license"></span>Professional Service</h4>
-								<p>
-									Usage of the Internet is becoming more common due to rapid advancement of technology and power.
-								</p>
-							</div>
+					<?php } ?>
+						<br/>
 						</div>
-						<div class="col-lg-4 col-md-6">
-							<div class="single-feature">
-								<h4><span class="lnr lnr-phone"></span>Great Support</h4>
-								<p>
-									Usage of the Internet is becoming more common due to rapid advancement of technology and power.
-								</p>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6">
-							<div class="single-feature">
-								<h4><span class="lnr lnr-rocket"></span>Technical Skills</h4>
-								<p>
-									Usage of the Internet is becoming more common due to rapid advancement of technology and power.
-								</p>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6">
-							<div class="single-feature">
-								<h4><span class="lnr lnr-diamond"></span>Highly Recomended</h4>
-								<p>
-									Usage of the Internet is becoming more common due to rapid advancement of technology and power.
-								</p>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6">
-							<div class="single-feature">
-								<h4><span class="lnr lnr-bubble"></span>Positive Reviews</h4>
-								<p>
-									Usage of the Internet is becoming more common due to rapid advancement of technology and power.
-								</p>
-							</div>
-						</div>
+						<?php	echo $this->pagination->create_links();?>
 					</div>
-				</div>
-			</section>
 			<!-- End feature Area -->
