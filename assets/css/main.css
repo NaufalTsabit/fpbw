@@ -2460,7 +2460,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .feature-area {
-  background-color: #fff;
+  background-color: white;
 }
 
 .feature-area .header-text {
@@ -2613,13 +2613,16 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-top: 50px;
   }
 }
+.reviews-area {
+  background-color: #fab700;
+}
 
 .single-review {
   border-radius: 10px;
   padding: 30px;
   margin-bottom: 30px;
   text-align: center;
-  background-color: #f9f9ff;
+  background-color: #fab700;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -2631,18 +2634,17 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .single-review .star .checked {
-  color: orange;
+  color: white;
 }
 
 .single-review:hover {
   cursor: pointer;
   border-radius: 10px;
-  background-color: white;
+  background-color: orange;
   box-shadow: 0px 20px 30px 0px rgba(35, 94, 231, 0.2);
 }
 
 .callaction-area {
-  background: url(../img/callaction-bg.jpg) center;
   background-size: cover;
   text-align: center;
   color: #fff;
@@ -3504,6 +3506,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 .topic .container .pagination>li>a, .topic .container .pagination>li>span {
 	color: #747474;
 	text-decoration: none;
+}
+.bottom-border {
+  border-bottom: 6px solid black;
+  width: 50px
 }
 
 /*

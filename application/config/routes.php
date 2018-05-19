@@ -59,3 +59,4 @@ $route['team']='Welcome/pages/team';
 $route['contact']='Welcome/pages/contact';
 $route['gallery']='Welcome/gallery';
 $route['datakamera']='Welcome/admin/datakamera';
+$route['changepass']='Welcome/admin/change_pass';

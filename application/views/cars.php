@@ -7,7 +7,6 @@
 							<h1 class="text-white">
 								Cars
 							</h1>
-							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="cars.html"> Cars</a></p>
 						</div>
 					</div>
 				</div>
@@ -19,9 +18,9 @@
 				<div class="container">
 					<div class="row d-flex justify-content-center pb-40">
 						<div class="col-md-8 pb-40 header-text">
-							<h1 class="text-center pb-10">Choose your Desired Car Model</h1>
+							<h1 class="text-center pb-10">See Our Recent Camera</h1>
 							<p class="text-center">
-								Who are in extremely love with eco friendly system.
+								With high quality camera for you to choose.
 							</p>
 						</div>
 					</div>

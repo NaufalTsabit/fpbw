@@ -40,15 +40,19 @@
 			        <a href="<?php echo base_url()?>"><img src="<?php echo base_url('assets/img/newlogo.png'); ?>" height="30" width="198"/></a>
 			      </div>
 			      <nav id="nav-menu-container">
-							<?php if(base_url(uri_string()) == 'http://'.$_SERVER['HTTP_HOST'].str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']).'admin'){ ?>
+							<?php if($this->session->userdata('status') == "login"){ ?>
 							<ul class="nav-menu">
 			          <li class="menu-active"><a href="<?php echo base_url()?>">Data Kamera</a></li>
-			          <li><a href="<?php echo base_url("about"); ?>">test</a></li>
 			          <li><a href="<?php echo base_url("cars"); ?>">Cars</a></li>
 			          <li><a href="<?php echo base_url("service"); ?>">Service</a></li>
 			          <li><a href="<?php echo base_url("team"); ?>">Team</a></li>
 			          <!-- <li><a href="<?php echo base_url()."index.php/Welcome/pages/"."blog-home"; ?>">Blog</a></li> -->
-			          <li><a href="<?php echo base_url("Logout"); ?>"><?php echo $this->session->userdata("nama"); ?></a></li>
+								<li class="menu-has-children"><a href=""><?php echo $this->session->userdata("nama"); ?></a>
+									<ul>
+										<li><a href="<?php echo base_url("changepass"); ?>">Change Password</a></li>
+										<li><a href="<?php echo base_url("Logout"); ?>">Logout</a></li>
+									</ul>
+			          <!-- <li><a href="<?php echo base_url("Logout"); ?>"><?php echo $this->session->userdata("nama"); ?></a></li> -->
 			          <!-- <li class="menu-has-children"><a href="">Pages</a>
 			            <ul>
 			              <li><a href="blog-single.html">Blog Single</a></li>
@@ -59,9 +63,7 @@
 						<?php } else { ?>
 			        <ul class="nav-menu">
 			          <li class="menu-active"><a href="<?php echo base_url()?>">Home</a></li>
-			          <li><a href="<?php echo base_url("about"); ?>">About</a></li>
 			          <li><a href="<?php echo base_url("cars"); ?>">Cars</a></li>
-			          <li><a href="<?php echo base_url("service"); ?>">Service</a></li>
 			          <li><a href="<?php echo base_url("gallery"); ?>">Gallery</a></li>
 			          <!-- <li><a href="<?php echo base_url()."index.php/Welcome/pages/"."blog-home"; ?>">Blog</a></li> -->
 			          <li><a href="<?php echo base_url("contact"); ?>">Contact</a></li>

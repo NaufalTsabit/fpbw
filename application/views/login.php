@@ -10,7 +10,7 @@
 		    	</div>
 		    	<div class="form-group row">
 		        <div class="col-md-12">
-		            <button type="submit" class="btn btn-default btn-lg btn-block text-center text-uppercase" value="Login">Login</button>
+		            <button type="submit" class="btn btn-default btn-lg btn-block text-center text-uppercase" value="">Login</button>
 		        </div>
 		    </div>
 		</form>

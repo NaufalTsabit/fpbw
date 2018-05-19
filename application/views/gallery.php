@@ -1,6 +1,10 @@
 <div class="container">
   <div class="section-top-border">
-    <h3>Image Gallery</h3>
+    <h1>Image Gallery</h1>
+    <br/>
+    <div class="bottom-border"> </div>
+    <br/>
+    <p>Made By Enochians, Aerial & Equipment Supported By Konsep Studio </p>
     <div class="row gallery-item">
       <?php $no = $this->uri->segment('3') + 1;
       foreach ($files as $u) {

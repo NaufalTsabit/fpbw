@@ -21,7 +21,8 @@ class Welcome extends CI_Controller {
 	public function __construct() {
         parent::__construct();
         $this->load->helper(array('url'));
-				$this->load->model(array('Model_insert','Model_data','Model_delete'));
+				$this->load->model(array('Model_insert','Model_data','Model_delete','Model_change'));
+				$this->load->library('form_validation');
     }
 	public function index() {
 		$this->load->view('header');
@@ -84,4 +85,26 @@ class Welcome extends CI_Controller {
 			redirect('admin');
 		}
 	}
+	public function save_password() {
+	  $this->form_validation->set_rules('new','New','required|alpha_numeric');
+	  $this->form_validation->set_rules('re_new', 'Retype New', 'required|matches[new]');
+
+		if($this->form_validation->run() == FALSE) {
+			$this->load->view('header');
+			$this->load->view('Admin/change_pass');
+			$this->load->view('footer');
+  	} else {
+   		$cek_old = $this->Model_change->cek_old();
+   		if ($cek_old == False){
+    		$this->session->set_flashdata('error','Old password not match!' );
+    		$this->load->view('header');
+    		$this->load->view('Admin/change_pass');
+    		$this->load->view('footer');
+   		} else {
+    		$this->Model_change->save();
+    		$this->session->set_flashdata('error','Your password success to change, please relogin !' );
+		    redirect(base_url("admin"));
+   		}//end if valid_user
+  	}
+ 	}
 }
