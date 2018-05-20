@@ -116,6 +116,8 @@ class Welcome extends CI_Controller {
 		$stock = $this->input->post('stock');
 		$harga = $this->input->post('harga');
 		$deskripsi = $this->input->post('deskripsi');
+		$types = $this->input->post('types');
+		$resol =  $this->input->post('resolusi');
 		$config = array(
 				'upload_path' => "./uploads/",
 				'allowed_types' => "gif|jpg|png|jpeg|pdf",
@@ -135,6 +137,8 @@ class Welcome extends CI_Controller {
 			$test = array(
 				'merk' => $tipekamera,
 				'seri' => $series,
+				'format' => $types,
+				'resolusi' => $resolusi,
 				'stock' => $stock,
 				'harga' => $harga,
 				'deskripsi' => $deskripsi,
@@ -148,7 +152,6 @@ class Welcome extends CI_Controller {
 	public function delete($id) {
 		$where = array('ID'=>$id);
 		$result = $this->Model_delete->delete('data_kamera', $where);
-
 		if($result >= 1) {
 		redirect('admin/admin/datakamera');
 		}
@@ -200,6 +203,25 @@ class Welcome extends CI_Controller {
  		);
 
  		$this->Model_update->update($where,$test,'data_kamera');
- 		redirect('admin/datakamera');
+ 		redirect('admin/admin/datakamera');
 	}
+
+	public function sendmail() {
+        $from_email = "email@example.com";
+        $to_email = $this->input->post('email');
+				$subject = $this->input->post('subject');
+				$message = $this->input->post('message');
+        //Load email library
+        $this->load->library('email');
+        $this->email->from($from_email, 'Identification');
+        $this->email->to($to_email);
+        $this->email->subject($subject);
+        $this->email->message($message);
+        //Send mail
+        if($this->email->send())
+            $this->session->set_flashdata("email_sent","Congragulation Email Send Successfully.");
+        else
+            $this->session->set_flashdata("email_sent","You have encountered an error");
+        $this->load->view('contact');
+    }
 }

@@ -20,9 +20,11 @@
               </div>
             </div>
             <input type="text" name="series" placeholder="Series" class="common-input mb-20 form-control" required="">
+            <input type="text" name="types" placeholder="Types" class="common-input mb-20 form-control" required="">
+            <input type="text" name="resolusi" placeholder="Resolution" class="common-input mb-20 form-control" required="">
             <input type="text" name="stock" placeholder="Stock" class="common-input mb-20 form-control" required="">
-            <input type="text" name="harga" placeholder="Harga Sewa" class="common-input mb-20 form-control" required="">
-            <textarea name="deskripsi" placeholder="Deskripsi" class="common-textarea form-control" required=""></textarea><br/>
+            <input type="text" name="harga" placeholder="Renting Price" class="common-input mb-20 form-control" required="">
+            <textarea name="deskripsi" placeholder="Description" class="common-textarea form-control" required=""></textarea><br/>
             <input type='file' class="form-control txt-field" name='test' size='20' />
             <button type="submit" class="primary-btn mt-20 text-white" style="float: left;" value="submit" name="submit">Save</button>
           </div>

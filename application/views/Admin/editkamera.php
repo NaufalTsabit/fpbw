@@ -22,6 +22,8 @@
               </div>
             </div>
             <input type="text" name="series" placeholder="Series" class="common-input mb-20 form-control" required="" value="<?php echo $row->seri; ?>">
+            <input type="text" name="types" placeholder="Types" class="common-input mb-20 form-control" required="" value="<?php echo $row->format; ?>">
+            <input type="text" name="resolusi" placeholder="Resolution" class="common-input mb-20 form-control" required="" value="<?php echo $row->resolusi; ?>">
             <input type="text" name="stock" placeholder="Stock" class="common-input mb-20 form-control" required="" value="<?php echo $row->stock; ?>">
             <input type="text" name="harga" placeholder="Harga Sewa" class="common-input mb-20 form-control" required="" value="<?php echo $row->harga; ?>">
             <textarea name="deskripsi" placeholder="Deskripsi" class="common-textarea form-control" required=""><?php echo $row->deskripsi; ?></textarea><br/>
